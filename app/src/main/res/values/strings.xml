@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Aplicacion1Trimestre_martinGilMiguel</string>
+    <string name="api_key_google" translatable="false" formatted="false">598346733160-g1f9mbkiafohf0inn3t1p8sah6pq9rmt.apps.googleusercontent.com</string>
 </resources>
