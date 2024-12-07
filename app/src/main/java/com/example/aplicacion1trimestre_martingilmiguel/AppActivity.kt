@@ -1,5 +1,6 @@
 package com.example.aplicacion1trimestre_martingilmiguel
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -17,25 +18,34 @@ class AppActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding= ActivityAppBinding.inflate(layoutInflater)
+        binding = ActivityAppBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        auth= Firebase.auth
-        binding.tvEmail.text=auth.currentUser?.email.toString()
+
+        auth = Firebase.auth
         setListeners()
     }
 
     private fun setListeners() {
+
+        // Manejar el clic en los botones de cada apartado
         binding.btnSalir.setOnClickListener {
             finishAffinity()
         }
         binding.btnCerrar.setOnClickListener {
             auth.signOut()
             finish()
+        }
+
+
+        binding.btnNotas.setOnClickListener {
+            val intent = Intent(this, NotasActivity::class.java)
+            startActivity(intent)
         }
     }
 }

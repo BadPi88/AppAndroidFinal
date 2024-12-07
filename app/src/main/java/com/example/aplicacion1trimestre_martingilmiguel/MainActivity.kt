@@ -37,11 +37,11 @@ class MainActivity : AppCompatActivity() {
                         }
                 }
             }catch(e: ApiException){
-                Log.d("ERROR de API:>>>>", e.message.toString())
+                Log.d("ERROR de API:", e.message.toString())
             }
         }
         if(it.resultCode== RESULT_CANCELED){
-            Toast.makeText(this, "El usuario canceló", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "El usuario cancelo", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        title = "MemoLink"
         auth= Firebase.auth
         setListeners()
     }
