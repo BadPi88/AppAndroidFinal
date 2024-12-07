@@ -13,12 +13,13 @@ import com.example.aplicacion1trimestre_martingilmiguel.models.Personaje
 import com.example.aplicacion1trimestre_martingilmiguel.providers.ApiClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class PersonajesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPersonajesBinding
-    var lista = mutableListOf<Personaje>()
-    var personajesAdapter = PersonajesAdapter(lista)
+    var listaPersonajes = mutableListOf<Personaje>()
+    var personajesAdapter = PersonajesAdapter(listaPersonajes)
     var api = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,24 +44,22 @@ class PersonajesActivity : AppCompatActivity() {
 
     private fun traerDatos() {
         lifecycleScope.launch(Dispatchers.IO) {
-
-            // Llamada a la API
             val respuesta = ApiClient.apiClient.getPersonajes()
-
-            // Verificar si la respuesta fue exitosa y manejar el cuerpo
-            if (respuesta.isSuccessful && respuesta.body() != null) {
-
-            } else {
-
-                Toast.makeText(
-                    this@PersonajesActivity,
-                    "Error en la respuesta de la API",
-                    Toast.LENGTH_SHORT
-                ).show()
-
+            withContext(Dispatchers.Main) {
+                if (respuesta.isSuccessful) {
+                    val listaP = respuesta.body()
+                    if (listaP != null) {
+                        personajesAdapter.listaPersonajes = listaP.listaPersonajes
+                    }
+                    personajesAdapter.notifyDataSetChanged()
+                } else {
+                    Toast.makeText(
+                        this@PersonajesActivity,
+                        "Error en la respuesta de la API",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
             }
-
-
         }
     }
 }

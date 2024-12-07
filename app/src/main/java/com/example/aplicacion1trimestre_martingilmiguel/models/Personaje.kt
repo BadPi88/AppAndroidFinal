@@ -1,5 +1,7 @@
 package com.example.aplicacion1trimestre_martingilmiguel.models
 
+import com.google.gson.annotations.SerializedName
+
 
 data class Personaje(
     val id: Int,
@@ -9,3 +11,8 @@ data class Personaje(
     val image: String,
 )
 
+
+
+data class ListaPersonajes(
+    @SerializedName("results")val listaPersonajes: MutableList<Personaje>
+)
