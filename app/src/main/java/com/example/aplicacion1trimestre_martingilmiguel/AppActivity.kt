@@ -2,12 +2,14 @@ package com.example.aplicacion1trimestre_martingilmiguel
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityAppBinding
 import com.example.aplicacion1trimestre_martingilmiguel.mapa.MapaActivity
+import com.example.aplicacion1trimestre_martingilmiguel.providers.ApiClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -48,6 +50,10 @@ class AppActivity : AppCompatActivity() {
         }
         binding.btnBuscador.setOnClickListener {
             val intent = Intent(this, BuscadorWebActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnContactos.setOnClickListener {
+            val intent = Intent(this, PersonajesActivity::class.java)
             startActivity(intent)
         }
 

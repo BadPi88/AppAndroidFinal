@@ -11,5 +11,7 @@
     <string name="btn4_nombre">Imagenes</string>
     <string name="btn5_nombre">Contactos</string>
     <string name="btn6_nombre">Mi Perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
