@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityAppBinding
+import com.example.aplicacion1trimestre_martingilmiguel.mapa.MapaActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -40,6 +41,14 @@ class AppActivity : AppCompatActivity() {
         binding.btnCerrar.setOnClickListener {
             auth.signOut()
             finish()
+        }
+        binding.btnLocalizacion.setOnClickListener {
+            val intent = Intent(this, MapaActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnBuscador.setOnClickListener {
+            val intent = Intent(this, BuscadorWebActivity::class.java)
+            startActivity(intent)
         }
 
 

@@ -7,9 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".NotasActivity">
 
-    <!-- RecyclerView para mostrar las notas -->
-
-    <!-- Título de la actividad -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerNotas"
         android:layout_width="409dp"
@@ -29,8 +26,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Botón de Atras -->
 
     <Button
         android:id="@+id/btnAtras"

@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">Aplicacion1Trimestre_martinGilMiguel</string>
+
+    <string name="google_maps_key" formatted="false" translatable="false">AIzaSyD4umwTDPvVAV_abKEIPTR5kZ5KUhaZvWc</string>
     <string name="api_key_google" formatted="false" translatable="false">598346733160-g1f9mbkiafohf0inn3t1p8sah6pq9rmt.apps.googleusercontent.com</string>
 
+
     <string name="btn1_nombre">Notas</string>
-    <string name="btn2_nombre">Tiempo</string>
+    <string name="btn2_nombre">Buscador</string>
     <string name="btn3_nombre">Localizacion</string>
     <string name="btn4_nombre">Imagenes</string>
     <string name="btn5_nombre">Contactos</string>
-    <string name="btn6_nombre">Extras</string>
+    <string name="btn6_nombre">Mi Perfil</string>
 
 </resources>

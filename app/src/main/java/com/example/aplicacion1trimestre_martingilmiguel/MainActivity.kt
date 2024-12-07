@@ -117,7 +117,7 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, pass)
             .addOnCompleteListener{
                 if(it.isSuccessful){
-                    //todo ha ido bien
+
                     irActivityApp()
                 }
             }
