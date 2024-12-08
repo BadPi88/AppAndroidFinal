@@ -63,7 +63,8 @@ class BuscadorWebActivity : AppCompatActivity() {
             binding.webView.reload()
         }
 
-        binding.searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+        binding.searchView.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 val busqueda = query.toString().trim().lowercase(Locale.ROOT)
                 if (android.util.Patterns.WEB_URL.matcher(busqueda).matches()) {

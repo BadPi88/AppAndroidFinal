@@ -56,7 +56,10 @@ class AppActivity : AppCompatActivity() {
             val intent = Intent(this, PersonajesActivity::class.java)
             startActivity(intent)
         }
-
+        binding.btnPerfil.setOnClickListener {
+            val intent = Intent(this, PerfilUsuarioActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.btnNotas.setOnClickListener {
             val intent = Intent(this, NotasActivity::class.java)

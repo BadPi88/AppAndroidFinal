@@ -16,54 +16,96 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.commit
 import com.example.aplicacion1trimestre_martingilmiguel.R
+import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityMapaBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.model.PolylineOptions
+
 
 class MapaActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    private val LOCATION_CODE = 1000
+    private lateinit var binding: ActivityMapaBinding
+
     private lateinit var mapa: GoogleMap
-    private val locationPermissionRequest = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permisos ->
-        if (permisos[Manifest.permission.ACCESS_COARSE_LOCATION] == true || permisos[Manifest.permission.ACCESS_FINE_LOCATION] == true) {
-            gestionarLocalizacion()
-        } else
-            Toast.makeText(this, "No hay permisos de ubicación", Toast.LENGTH_SHORT).show()
-    }
+    private val locationPermissionRequest =
+        registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permisos ->
+            if (permisos[Manifest.permission.ACCESS_COARSE_LOCATION] == true || permisos[Manifest.permission.ACCESS_FINE_LOCATION] == true) {
+                gestionarLocalizacion()
+            } else
+                Toast.makeText(this, "No hay permisos de ubicación", Toast.LENGTH_SHORT).show()
+        }
 
     private fun gestionarLocalizacion() {
-        // Para comprobar si una var lateint esta inicializada ::
+
         if (!::mapa.isInitialized) return
         // Importar el manifest android
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
-            && ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED
+            && ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
             mapa.isMyLocationEnabled = true
             mapa.uiSettings.isMyLocationButtonEnabled = true
         } else {
-            // Vamos a pedir los permisos
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_COARSE_LOCATION)) {
+            //Pedir los permisos
+            if (ActivityCompat.shouldShowRequestPermissionRationale(
+                    this,
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                )
+                || ActivityCompat.shouldShowRequestPermissionRationale(
+                    this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                )
+            ) {
                 mostrarExplicacion()
             } else {
                 escogerPermisos()
             }
+
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMapaBinding.inflate(layoutInflater)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_mapa)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        listenerBotones()
         iniciarFragmentoMapa()
+    }
+
+    private fun listenerBotones() {
+        binding.btnOfi1.setOnClickListener {
+            zoomEnOficinaCentral()
+        }
+
+        binding.btnOfi2.setOnClickListener {
+            zoomEnOficinaRegional()
+        }
+    }
+
+    private fun zoomEnOficinaRegional() {
+        val oficinaCentral = LatLng(40.449821, -3.701948)
+
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(oficinaCentral, 15f))
+
+    }
+
+    private fun zoomEnOficinaCentral() {
+        val oficinaRegional = LatLng(36.8504511, -2.4656217)
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(oficinaRegional, 15f))
     }
 
     private fun iniciarFragmentoMapa() {
@@ -78,11 +120,10 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(p0: GoogleMap) {
         mapa = p0
         mapa.uiSettings.isZoomControlsEnabled = true
-        ponermarcadorEmpresa(LatLng(36.8504511,-2.4656217))  // Ubicación del marcador
-        ponermarcadorEmpresa(LatLng(36.8504511,-20.4656217))  // Ubicación del marcador
+        ponermarcadorEmpresa(LatLng(36.8504511, -2.4656217))
+        ponermarcadorEmpresa(LatLng(40.449821, -3.701948))
         gestionarLocalizacion()
     }
-
 
 
     private fun ponermarcadorEmpresa(latLng: LatLng) {
@@ -95,7 +136,7 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback {
         mapa.addMarker(markerOptions)
 
         // Mover la cámara para centrar el mapa en el marcador
-        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15f))  // El 15f es el nivel de zoom
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15f))
     }
 
     //------permisos-------------------------------------------------------------------
@@ -117,8 +158,10 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private fun escogerPermisos() {
         locationPermissionRequest.launch(
-            arrayOf(Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_COARSE_LOCATION)
+            arrayOf(
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            )
         )
     }
     //-------------------------------------
