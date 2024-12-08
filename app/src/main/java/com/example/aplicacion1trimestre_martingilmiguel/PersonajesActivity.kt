@@ -20,7 +20,7 @@ class PersonajesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPersonajesBinding
     var listaPersonajes = mutableListOf<Personaje>()
     var personajesAdapter = PersonajesAdapter(listaPersonajes)
-    var api = ""
+   //no necesito variable api porque es publica
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,10 +45,12 @@ class PersonajesActivity : AppCompatActivity() {
     private fun traerDatos() {
         lifecycleScope.launch(Dispatchers.IO) {
             val respuesta = ApiClient.apiClient.getPersonajes()
+
             withContext(Dispatchers.Main) {
                 if (respuesta.isSuccessful) {
                     val listaP = respuesta.body()
                     if (listaP != null) {
+                        // cargamos la lista en el adapter
                         personajesAdapter.listaPersonajes = listaP.listaPersonajes
                     }
                     personajesAdapter.notifyDataSetChanged()

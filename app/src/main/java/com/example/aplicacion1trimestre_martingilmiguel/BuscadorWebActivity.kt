@@ -58,6 +58,7 @@ class BuscadorWebActivity : AppCompatActivity() {
         binding.webView.loadUrl("https://www.google.es")
     }
 
+//----------------------------------------------------------
     private fun setListeners() {
         binding.swipe.setOnRefreshListener {
             binding.webView.reload()
@@ -81,7 +82,7 @@ class BuscadorWebActivity : AppCompatActivity() {
             }
         })
     }
-
+//---------------------------------------------
     override fun onBackPressed() {
         if (binding.webView.canGoBack()) {
             binding.webView.goBack()

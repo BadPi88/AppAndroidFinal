@@ -36,26 +36,20 @@ class PerfilGuardadoActivity : AppCompatActivity() {
         val tvSpinner = findViewById<TextView>(R.id.tvSpinnerDisplay)
         val tvAltura = findViewById<TextView>(R.id.tvAlturaDisplay)
         val tvCheckbox = findViewById<TextView>(R.id.tvCheckboxDisplay)
-        val tvRadio = findViewById<TextView>(R.id.tvRadioDisplay)
 
-        // Mostrar datos en los TextViews
+        // Mostrar datos en los TextViews $ es para poner el valor de la variable dentro de una string
         tvNombre.text = "Nombre: ${sharedPrefs.getString("nombre", "No guardado")}"
-
 
         tvSpinner.text = "Selección: ${sharedPrefs.getInt("spinnerPosition", 0)}"
 
         tvAltura.text = "Altura: ${sharedPrefs.getInt("altura", 0)}"
 
         val checkboxPulsada =
-            if (sharedPrefs.getBoolean("checkboxChecked", false)) "Marcado" else "No marcado"
-        tvCheckbox.text = "Checkbox: $checkboxPulsada"
+            if (sharedPrefs.getBoolean("checkboxChecked", false)){
+                "Si"
+            } else "No"
 
-        val radioSelection = when (sharedPrefs.getInt("radioSelection", 0)) {
-            1 -> "Opción 1"
-            2 -> "Opción 2"
-            else -> "No seleccionado"
-        }
-        // Mostrar la selección del radio button
-        tvRadio.text = "Radio: $radioSelection"
+        tvCheckbox.text = "Suscribirse a Noticias: $checkboxPulsada"
+
     }
 }

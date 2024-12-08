@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
-    android:padding="8dp"
+    android:padding="10dp"
     app:cardCornerRadius="12dp"
     app:cardElevation="8dp"
     app:cardUseCompatPadding="true">
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:backgroundTint="#E53935"
-            android:text="Borrar"
+            android:text="@string/borrar"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btn_actualizar"

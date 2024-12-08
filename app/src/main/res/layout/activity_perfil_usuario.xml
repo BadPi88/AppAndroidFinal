@@ -5,7 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PerfilUsuarioActivity">
+    android:background="@drawable/gradient_aguamarina"
+    tools:context=".PerfilUsuarioActivity"
+    tools:layout_editor_absoluteX="10dp"
+    tools:layout_editor_absoluteY="-24dp">
 
     <TextView
         android:id="@+id/tvInfo"
@@ -35,24 +38,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
 
-    <RadioButton
-        android:id="@+id/rbOption1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="48dp"
-        android:padding="8dp"
-        android:text="Opción 1"
-        app:layout_constraintEnd_toStartOf="@+id/rbOption2"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cbOption1" />
 
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="16dp"
+        android:shadowColor="#4CAF50"
+        android:backgroundTint="#4CAF50"
         android:text="Guardar"
         app:layout_constraintBottom_toBottomOf="@+id/btnCancelar"
         app:layout_constraintEnd_toStartOf="@+id/btnCancelar" />
@@ -61,14 +54,14 @@
         android:id="@+id/cbOption1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
+        android:layout_marginStart="108dp"
         android:layout_marginTop="16dp"
         android:padding="10dp"
-        android:text="Check 1"
+        android:text="Suscribirse a Noticias"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sbAltura"
-        app:layout_constraintVertical_bias="0.013" />
+        app:layout_constraintVertical_bias="0.014" />
 
     <SeekBar
         android:id="@+id/sbAltura"
@@ -78,6 +71,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         android:padding="10dp"
+        android:max="230"
+        android:min="120"
+        android:progress="175"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,22 +84,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Estatura:"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spinnerOpciones" />
 
-    <RadioButton
-        android:id="@+id/rbOption2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="112dp"
-        android:padding="8dp"
-        android:text="Opción 2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbOption1" />
 
     <Button
         android:id="@+id/btnCancelar"
@@ -111,11 +99,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="100dp"
+        android:layout_marginBottom="48dp"
         android:text="Cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbOption2"
-        app:layout_constraintVertical_bias="0.235" />
+        android:backgroundTint="#D33C3C"
+        app:layout_constraintVertical_bias="0.52" />
 
     <Spinner
         android:id="@+id/spinnerOpciones"
@@ -130,6 +119,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etNombre" />
 
+    <ImageView
 
+        android:id="@+id/imageView3"
+        android:layout_width="236dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="53dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbOption1"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

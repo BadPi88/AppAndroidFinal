@@ -36,7 +36,6 @@ class AppActivity : AppCompatActivity() {
 
     private fun setListeners() {
 
-        // Manejar el clic en los botones de cada apartado
         binding.btnSalir.setOnClickListener {
             finishAffinity()
         }

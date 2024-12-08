@@ -20,6 +20,7 @@ class NotaAdapter(
 
     override fun getItemCount() = lista.size
 
+    // renderiza cada nota
     override fun onBindViewHolder(holder: NotaViewHolder, position: Int) {
         holder.render(lista[position], borrarNota, updateNota)
     }

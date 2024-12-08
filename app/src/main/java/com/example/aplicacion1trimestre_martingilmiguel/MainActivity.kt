@@ -19,6 +19,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
+
     private  val responseLauncher=registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
         if(it.resultCode== RESULT_OK){
             val datos= GoogleSignIn.getSignedInAccountFromIntent(it.data)
@@ -61,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        title = "MemoLink"
+        title = "PocketBase"
         auth= Firebase.auth
         setListeners()
     }
@@ -88,7 +89,8 @@ class MainActivity : AppCompatActivity() {
             .build()
         val googleClient=GoogleSignIn.getClient(this, googleConf)
 
-        googleClient.signOut() //Fundamental para que no haga login automatico si he cerrado session
+        //para que no haga login automatico si he cerrado session
+        googleClient.signOut()
 
         responseLauncher.launch(googleClient.signInIntent)
     }

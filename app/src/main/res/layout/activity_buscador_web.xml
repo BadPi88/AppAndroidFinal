@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_aguamarina_invert"
     tools:context=".BuscadorWebActivity">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:padding="16dp"
-        android:text="Buscar Elemento"
+        android:text="@string/buscar_elemento"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +44,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchView">
 
-        <!-- WebView para visualizar el resultado de la búsqueda -->
         <WebView
         android:id="@+id/webView"
         android:layout_width="0dp"

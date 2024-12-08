@@ -8,7 +8,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacion1trimestre_martingilmiguel.R
 import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityAddNotasBinding
-import com.example.aplicacion1trimestre_martingilmiguel.db.MyDatabase
 import com.example.aplicacion1trimestre_martingilmiguel.models.NotaModel
 import com.example.aplicacion1trimestre_martingilmiguel.providers.db.CrudNotas
 
@@ -33,9 +32,7 @@ class AddNotasActivity : AppCompatActivity() {
             insets
         }
 
-
         recogerNota()
-
 
         setListeners()
 
@@ -60,13 +57,11 @@ class AddNotasActivity : AppCompatActivity() {
         }
     }
 
-    // Display data in the input fields
     private fun pintarDatos() {
         binding.etTitulo.setText(titulo)
         binding.etContenido.setText(descripcion)
     }
 
-    // Set up listeners for buttons
     private fun setListeners() {
         binding.btnCancelar.setOnClickListener {
             finish()
@@ -77,7 +72,6 @@ class AddNotasActivity : AppCompatActivity() {
         }
     }
 
-    // Save the note (either create or update)
     private fun guardarRegistro() {
         if (datosCorrectos()) {
             val nota = NotaModel(id, titulo, descripcion)
@@ -99,7 +93,7 @@ class AddNotasActivity : AppCompatActivity() {
         }
     }
 
-    // Validate the data
+
     private fun datosCorrectos(): Boolean {
         titulo = binding.etTitulo.text.toString().trim()
         descripcion = binding.etContenido.text.toString().trim()
@@ -115,8 +109,4 @@ class AddNotasActivity : AppCompatActivity() {
         return true
     }
 
-    private fun limpiar() {
-        binding.etTitulo.setText("")
-        binding.etContenido.setText("")
-    }
 }

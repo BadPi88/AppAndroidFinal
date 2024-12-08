@@ -16,10 +16,9 @@ class PerfilUsuarioActivity : AppCompatActivity() {
     private lateinit var spinnerOpciones: Spinner
     private lateinit var sbAltura: SeekBar
     private lateinit var cbOption1: CheckBox
-    private lateinit var rbOption1: RadioButton
-    private lateinit var rbOption2: RadioButton
     private lateinit var btnGuardar: Button
     private lateinit var btnCancelar: Button
+    private lateinit var tvAltura: TextView
 
     private lateinit var binding: ActivityPerfilUsuarioBinding
 
@@ -35,9 +34,13 @@ class PerfilUsuarioActivity : AppCompatActivity() {
             insets
         }
 
+
+
         initializeViews()
         CargarDatos()
         buttonListeners()
+
+
     }
 
     private fun initializeViews() {
@@ -45,15 +48,35 @@ class PerfilUsuarioActivity : AppCompatActivity() {
         spinnerOpciones = findViewById(R.id.spinnerOpciones)
         sbAltura = findViewById(R.id.sbAltura)
         cbOption1 = findViewById(R.id.cbOption1)
-        rbOption1 = findViewById(R.id.rbOption1)
-        rbOption2 = findViewById(R.id.rbOption2)
         btnGuardar = findViewById(R.id.btnGuardar)
         btnCancelar = findViewById(R.id.btnCancelar)
 
+
+        sbAltura = findViewById(R.id.sbAltura)
+        tvAltura = findViewById(R.id.tvAltura)
+
+        sbAltura.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                // Mostrar el valor de la SeekBar en el TextView
+                tvAltura.text = " Estatura: $progress cm"
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+
+            }
+        })
+
+
         // Configuración del Spinner
-        val opcionesSpinner = listOf("Desarrollador", "Administrador de Sistemas", "Soporte Técnico")
+        val opcionesSpinner =
+            listOf("Desarrollador", "Administrador de Sistemas", "Soporte Técnico")
         //adaptador
-        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesSpinner)
+        val spinnerAdapter =
+            ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesSpinner)
 
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerOpciones.adapter = spinnerAdapter
@@ -70,11 +93,6 @@ class PerfilUsuarioActivity : AppCompatActivity() {
         sbAltura.progress = sharedPrefs.getInt("altura", 0)
 
         cbOption1.isChecked = sharedPrefs.getBoolean("checkboxChecked", false)
-
-        when (sharedPrefs.getInt("radioSelection", 0)) {
-            1 -> rbOption1.isChecked = true
-            2 -> rbOption2.isChecked = true
-        }
     }
 
     // Listeners para los botones
@@ -93,14 +111,6 @@ class PerfilUsuarioActivity : AppCompatActivity() {
             editor.putInt("altura", sbAltura.progress)
 
             editor.putBoolean("checkboxChecked", cbOption1.isChecked)
-
-            // guardar radio button
-            val radioSelection = when {
-                rbOption1.isChecked -> 1
-                rbOption2.isChecked -> 2
-                else -> 0
-            }
-            editor.putInt("radioSelection", radioSelection)
 
             editor.apply()
 
