@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:598346733160:android:8164193a44f3cfbdbb0ddd",
         "android_client_info": {
-          "package_name": "com.example.aplicacion1trimestre_martingilmiguel"
+          "package_name": "com.example.aplicacion2trimestre_martingilmiguel"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "598346733160-60ouue41hi4cegfi8r1j2o0vd8jv3nov.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.aplicacion1trimestre_martingilmiguel",
+            "package_name": "com.example.aplicacion2trimestre_martingilmiguel",
             "certificate_hash": "599a50534b7375210d42aa31fd6585978f3aa84b"
           }
         },

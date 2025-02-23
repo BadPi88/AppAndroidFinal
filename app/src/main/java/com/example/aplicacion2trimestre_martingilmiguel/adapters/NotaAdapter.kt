@@ -1,10 +1,10 @@
-package com.example.aplicacion1trimestre_martingilmiguel.adapters
+package com.example.aplicacion2trimestre_martingilmiguel.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.aplicacion1trimestre_martingilmiguel.R
-import com.example.aplicacion1trimestre_martingilmiguel.models.NotaModel
+import com.example.aplicacion2trimestre_martingilmiguel.R
+import com.example.aplicacion2trimestre_martingilmiguel.models.NotaModel
 
 class NotaAdapter(
 

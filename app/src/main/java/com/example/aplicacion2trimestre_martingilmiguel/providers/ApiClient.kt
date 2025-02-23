@@ -1,4 +1,4 @@
-package com.example.aplicacion1trimestre_martingilmiguel.providers
+package com.example.aplicacion2trimestre_martingilmiguel.providers
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

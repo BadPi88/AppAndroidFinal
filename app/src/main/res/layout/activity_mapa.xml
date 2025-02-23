@@ -6,7 +6,7 @@
     android:background="@drawable/gradient_mapas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mapa.MapaActivity">
+    tools:context=".ui.mapa.MapaActivity">
 
     <TextView
         android:id="@+id/tvTitle"

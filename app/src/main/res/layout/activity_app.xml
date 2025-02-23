@@ -6,7 +6,7 @@
     android:background="@drawable/gradient_aguamarina"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AppActivity">
+    tools:context=".ui.AppActivity">
 
     <TextView
         android:id="@+id/menuTitle"
@@ -21,87 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_notas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="50dp"
-        android:backgroundTint="@color/material_dynamic_primary40"
-        android:padding="16dp"
-        android:text="@string/btn1_nombre"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuTitle" />
-
-    <Button
-        android:id="@+id/btn_buscador"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
-        android:backgroundTint="@color/material_dynamic_primary40"
-        android:padding="16dp"
-        android:text="@string/btn2_nombre"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_notas" />
-
-    <Button
-        android:id="@+id/btn_perfil"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
-        android:backgroundTint="@color/material_dynamic_primary40"
-        android:padding="16dp"
-        android:text="@string/btn6_nombre"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_contactos" />
-
-    <Button
-        android:id="@+id/btn_localizacion"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
-        android:backgroundTint="@color/material_dynamic_primary40"
-        android:padding="16dp"
-        android:text="@string/btn3_nombre"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_buscador" />
-
-    <Button
-        android:id="@+id/btn_contactos"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
-        android:backgroundTint="@color/material_dynamic_primary40"
-        android:padding="16dp"
-        android:text="@string/btn5_nombre"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_localizacion" />
-
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="140dp"
@@ -112,17 +31,141 @@
         app:layout_constraintTop_toBottomOf="@+id/menuTitle"
         app:srcCompat="@drawable/logo" />
 
+    <!-- Primera fila de botones -->
+    <Button
+        android:id="@+id/btn_notas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/material_dynamic_primary40"
+        android:padding="16dp"
+        android:text="@string/btn1_nombre"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/btn_buscador" />
+
+    <Button
+        android:id="@+id/btn_buscador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/material_dynamic_primary40"
+        android:padding="16dp"
+        android:text="@string/btn2_nombre"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_notas"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Segunda fila de botones -->
+    <Button
+        android:id="@+id/btn_localizacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/material_dynamic_primary40"
+        android:padding="16dp"
+        android:text="@string/btn3_nombre"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_notas"
+        app:layout_constraintEnd_toStartOf="@+id/btn_contactos" />
+
+    <Button
+        android:id="@+id/btn_contactos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/material_dynamic_primary40"
+        android:padding="16dp"
+        android:text="@string/btn5_nombre"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_localizacion"
+        app:layout_constraintTop_toBottomOf="@+id/btn_buscador"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Tercera fila de botones -->
+    <Button
+        android:id="@+id/btn_perfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/material_dynamic_primary40"
+        android:padding="16dp"
+        android:text="@string/btn6_nombre"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_localizacion"
+        app:layout_constraintEnd_toStartOf="@+id/btn_opcion1" />
+
+    <Button
+        android:id="@+id/btn_opcion1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/material_dynamic_primary40"
+        android:padding="16dp"
+        android:text="Opción 1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_perfil"
+        app:layout_constraintTop_toBottomOf="@+id/btn_contactos"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Cuarta fila de botones -->
+    <Button
+        android:id="@+id/btn_opcion2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/material_dynamic_primary40"
+        android:padding="16dp"
+        android:text="Opción 2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_perfil"
+        app:layout_constraintEnd_toStartOf="@+id/btn_opcion3" />
+
+    <Button
+        android:id="@+id/btn_opcion3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/material_dynamic_primary40"
+        android:padding="16dp"
+        android:text="Opción 3"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_opcion2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_opcion1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón de cerrar sesión -->
     <Button
         android:id="@+id/btn_cerrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/material_dynamic_primary40"
         android:text="@string/cerrar_sesion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_perfil" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_opcion2" />
 
+    <!-- Botón de salir -->
     <Button
         android:id="@+id/btn_salir"
         android:layout_width="wrap_content"
@@ -131,7 +174,6 @@
         android:text="@string/salir"
         android:backgroundTint="#E53935"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_cerrar" />
 

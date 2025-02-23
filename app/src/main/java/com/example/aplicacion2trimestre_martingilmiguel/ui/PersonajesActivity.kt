@@ -1,4 +1,4 @@
-package com.example.aplicacion1trimestre_martingilmiguel
+package com.example.aplicacion2trimestre_martingilmiguel.ui
 
 import android.os.Bundle
 import android.widget.Toast
@@ -7,10 +7,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.aplicacion1trimestre_martingilmiguel.adapters.PersonajesAdapter
-import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityPersonajesBinding
-import com.example.aplicacion1trimestre_martingilmiguel.models.Personaje
-import com.example.aplicacion1trimestre_martingilmiguel.providers.ApiClient
+import com.example.aplicacion2trimestre_martingilmiguel.adapters.PersonajesAdapter
+import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityPersonajesBinding
+import com.example.aplicacion2trimestre_martingilmiguel.models.Personaje
+import com.example.aplicacion2trimestre_martingilmiguel.providers.ApiClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

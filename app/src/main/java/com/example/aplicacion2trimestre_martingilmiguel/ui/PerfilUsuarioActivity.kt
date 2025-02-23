@@ -1,4 +1,4 @@
-package com.example.aplicacion1trimestre_martingilmiguel
+package com.example.aplicacion2trimestre_martingilmiguel.ui
 
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityPerfilUsuarioBinding
+import com.example.aplicacion2trimestre_martingilmiguel.R
+import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityPerfilUsuarioBinding
 
 class PerfilUsuarioActivity : AppCompatActivity() {
     //componentes a guardar datos

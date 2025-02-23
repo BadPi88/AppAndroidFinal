@@ -1,4 +1,4 @@
-package com.example.aplicacion1trimestre_martingilmiguel.models
+package com.example.aplicacion2trimestre_martingilmiguel.models
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,4 +1,4 @@
-package com.example.aplicacion1trimestre_martingilmiguel
+package com.example.aplicacion2trimestre_martingilmiguel.ui
 
 import android.os.Bundle
 import android.widget.TextView
@@ -6,7 +6,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityPerfilGuardadoBinding
+import com.example.aplicacion2trimestre_martingilmiguel.R
+import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityPerfilGuardadoBinding
 
 class PerfilGuardadoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPerfilGuardadoBinding
@@ -37,10 +38,11 @@ class PerfilGuardadoActivity : AppCompatActivity() {
         val tvAltura = findViewById<TextView>(R.id.tvAlturaDisplay)
         val tvCheckbox = findViewById<TextView>(R.id.tvCheckboxDisplay)
 
+        
         // Mostrar datos en los TextViews $ es para poner el valor de la variable dentro de una string
         tvNombre.text = "Nombre: ${sharedPrefs.getString("nombre", "No guardado")}"
 
-        tvSpinner.text = "Selección: ${sharedPrefs.getInt("spinnerPosition", 0)}"
+        tvSpinner.text = "Departamento: ${sharedPrefs.getInt("spinnerPosition", 1)}"
 
         tvAltura.text = "Altura: ${sharedPrefs.getInt("altura", 0)}"
 

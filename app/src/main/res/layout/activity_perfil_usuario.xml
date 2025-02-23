@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_aguamarina"
-    tools:context=".PerfilUsuarioActivity"
+    tools:context=".ui.PerfilUsuarioActivity"
     tools:layout_editor_absoluteX="10dp"
     tools:layout_editor_absoluteY="-24dp">
 

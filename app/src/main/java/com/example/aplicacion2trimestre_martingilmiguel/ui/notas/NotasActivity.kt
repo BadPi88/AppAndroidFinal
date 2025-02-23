@@ -1,4 +1,4 @@
-package com.example.aplicacion1trimestre_martingilmiguel
+package com.example.aplicacion2trimestre_martingilmiguel
 
 import android.content.Context
 import android.content.Intent
@@ -12,12 +12,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.aplicacion1trimestre_martingilmiguel.adapters.NotaAdapter
-import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityNotasBinding
-import com.example.aplicacion1trimestre_martingilmiguel.db.MyDatabase
-import com.example.aplicacion1trimestre_martingilmiguel.models.NotaModel
-import com.example.aplicacion1trimestre_martingilmiguel.notas.AddNotasActivity
-import com.example.aplicacion1trimestre_martingilmiguel.providers.db.CrudNotas
+import com.example.aplicacion2trimestre_martingilmiguel.adapters.NotaAdapter
+import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityNotasBinding
+import com.example.aplicacion2trimestre_martingilmiguel.db.MyDatabase
+import com.example.aplicacion2trimestre_martingilmiguel.models.NotaModel
+import com.example.aplicacion2trimestre_martingilmiguel.ui.notas.AddNotasActivity
+import com.example.aplicacion2trimestre_martingilmiguel.providers.db.CrudNotas
 
 class NotasActivity : AppCompatActivity() {
 

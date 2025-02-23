@@ -1,4 +1,4 @@
-package com.example.aplicacion1trimestre_martingilmiguel.notas
+package com.example.aplicacion2trimestre_martingilmiguel.ui.notas
 
 import android.os.Bundle
 import android.widget.Toast
@@ -6,10 +6,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.aplicacion1trimestre_martingilmiguel.R
-import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityAddNotasBinding
-import com.example.aplicacion1trimestre_martingilmiguel.models.NotaModel
-import com.example.aplicacion1trimestre_martingilmiguel.providers.db.CrudNotas
+import com.example.aplicacion2trimestre_martingilmiguel.R
+import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityAddNotasBinding
+import com.example.aplicacion2trimestre_martingilmiguel.models.NotaModel
+import com.example.aplicacion2trimestre_martingilmiguel.providers.db.CrudNotas
 
 class AddNotasActivity : AppCompatActivity() {
 

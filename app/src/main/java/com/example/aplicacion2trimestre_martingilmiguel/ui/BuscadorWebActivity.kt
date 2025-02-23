@@ -1,4 +1,4 @@
-package com.example.aplicacion1trimestre_martingilmiguel
+package com.example.aplicacion2trimestre_martingilmiguel.ui
 
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -10,7 +10,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityBuscadorWebBinding
+import com.example.aplicacion2trimestre_martingilmiguel.R
+import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityBuscadorWebBinding
 import java.util.Locale
 
 class BuscadorWebActivity : AppCompatActivity() {

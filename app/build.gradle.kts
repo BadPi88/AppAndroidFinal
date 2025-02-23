@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.aplicacion1trimestre_martingilmiguel"
+    namespace = "com.example.aplicacion2trimestre_martingilmiguel"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.aplicacion1trimestre_martingilmiguel"
+        applicationId = "com.example.aplicacion2trimestre_martingilmiguel"
         minSdk = 33
         targetSdk = 34
         versionCode = 1
@@ -45,6 +45,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.android.gms:play-services-auth:21.2.0")
+
 
     implementation("com.squareup.picasso:picasso:2.8")
 

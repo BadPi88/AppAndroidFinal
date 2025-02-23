@@ -1,4 +1,4 @@
-package com.example.aplicacion1trimestre_martingilmiguel.db
+package com.example.aplicacion2trimestre_martingilmiguel.db
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase

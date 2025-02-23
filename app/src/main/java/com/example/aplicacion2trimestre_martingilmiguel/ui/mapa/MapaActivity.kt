@@ -1,4 +1,4 @@
-package com.example.aplicacion1trimestre_martingilmiguel.mapa
+package com.example.aplicacion2trimestre_martingilmiguel.ui.mapa
 
 import android.Manifest
 import android.content.Intent
@@ -15,8 +15,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.commit
-import com.example.aplicacion1trimestre_martingilmiguel.R
-import com.example.aplicacion1trimestre_martingilmiguel.databinding.ActivityMapaBinding
+import com.example.aplicacion2trimestre_martingilmiguel.R
+import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityMapaBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
