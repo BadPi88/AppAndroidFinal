@@ -15,8 +15,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Aplicacion1Trimestre_martinGilMiguel"
+        android:theme="@style/Theme.Aplicacion2Trimestre_martinGilMiguel"
         tools:targetApi="31">
+        <activity
+            android:name=".TablonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReproductorVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SensorLuzActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.PerfilGuardadoActivity"
             android:exported="false" />

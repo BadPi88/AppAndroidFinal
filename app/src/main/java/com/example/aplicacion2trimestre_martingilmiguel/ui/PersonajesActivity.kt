@@ -9,7 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.aplicacion2trimestre_martingilmiguel.adapters.PersonajesAdapter
 import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityPersonajesBinding
-import com.example.aplicacion2trimestre_martingilmiguel.models.Personaje
+import com.example.aplicacion2trimestre_martingilmiguel.model.Personaje
 import com.example.aplicacion2trimestre_martingilmiguel.providers.ApiClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

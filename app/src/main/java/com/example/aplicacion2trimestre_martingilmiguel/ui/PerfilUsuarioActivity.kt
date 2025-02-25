@@ -35,8 +35,6 @@ class PerfilUsuarioActivity : AppCompatActivity() {
             insets
         }
 
-
-
         initializeViews()
         CargarDatos()
         buttonListeners()
@@ -51,7 +49,6 @@ class PerfilUsuarioActivity : AppCompatActivity() {
         cbOption1 = findViewById(R.id.cbOption1)
         btnGuardar = findViewById(R.id.btnGuardar)
         btnCancelar = findViewById(R.id.btnCancelar)
-
 
         sbAltura = findViewById(R.id.sbAltura)
         tvAltura = findViewById(R.id.tvAltura)
@@ -70,7 +67,6 @@ class PerfilUsuarioActivity : AppCompatActivity() {
 
             }
         })
-
 
         // Configuración del Spinner
         val opcionesSpinner =

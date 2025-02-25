@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aplicacion2trimestre_martingilmiguel.R
-import com.example.aplicacion2trimestre_martingilmiguel.models.NotaModel
+import com.example.aplicacion2trimestre_martingilmiguel.model.NotaModel
 
 class NotaAdapter(
 

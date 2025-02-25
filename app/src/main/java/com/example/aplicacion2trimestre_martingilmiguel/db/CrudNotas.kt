@@ -3,7 +3,7 @@ package com.example.aplicacion2trimestre_martingilmiguel.providers.db
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
 import com.example.aplicacion2trimestre_martingilmiguel.db.AppBd
-import com.example.aplicacion2trimestre_martingilmiguel.models.NotaModel
+import com.example.aplicacion2trimestre_martingilmiguel.model.NotaModel
 
 class CrudNotas {
 

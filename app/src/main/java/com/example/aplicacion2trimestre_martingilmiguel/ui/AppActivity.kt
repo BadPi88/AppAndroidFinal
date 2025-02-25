@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacion2trimestre_martingilmiguel.NotasActivity
 import com.example.aplicacion2trimestre_martingilmiguel.R
+import com.example.aplicacion2trimestre_martingilmiguel.ReproductorVideoActivity
 import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityAppBinding
 import com.example.aplicacion2trimestre_martingilmiguel.ui.mapa.MapaActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -29,7 +30,6 @@ class AppActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         auth = Firebase.auth
         setListeners()
     }
@@ -62,6 +62,14 @@ class AppActivity : AppCompatActivity() {
 
         binding.btnNotas.setOnClickListener {
             val intent = Intent(this, NotasActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnOpcion1.setOnClickListener {
+            val intent = Intent(this, SensorLuzActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnOpcion2.setOnClickListener {
+            val intent = Intent(this, ReproductorVideoActivity::class.java)
             startActivity(intent)
         }
     }

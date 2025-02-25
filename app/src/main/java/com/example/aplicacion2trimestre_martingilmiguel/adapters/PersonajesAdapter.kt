@@ -1,7 +1,7 @@
 package com.example.aplicacion2trimestre_martingilmiguel.adapters
 
 import com.example.aplicacion2trimestre_martingilmiguel.R
-import com.example.aplicacion2trimestre_martingilmiguel.models.Personaje
+import com.example.aplicacion2trimestre_martingilmiguel.model.Personaje
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

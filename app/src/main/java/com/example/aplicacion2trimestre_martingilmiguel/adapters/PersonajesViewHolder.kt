@@ -4,7 +4,7 @@ package com.example.aplicacion2trimestre_martingilmiguel.adapters
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aplicacion2trimestre_martingilmiguel.databinding.ItemPersonajeBinding
-import com.example.aplicacion2trimestre_martingilmiguel.models.Personaje
+import com.example.aplicacion2trimestre_martingilmiguel.model.Personaje
 import com.squareup.picasso.Picasso
 
 

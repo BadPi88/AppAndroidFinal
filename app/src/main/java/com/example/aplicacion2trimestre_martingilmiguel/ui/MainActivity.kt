@@ -81,6 +81,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnGoogle.setOnClickListener{
             loginGoogle()
         }
+
     }
     //----------------------------------------------------------------------------------------------
     private fun loginGoogle() {

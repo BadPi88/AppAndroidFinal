@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aplicacion2trimestre_martingilmiguel.adapters.NotaAdapter
 import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityNotasBinding
 import com.example.aplicacion2trimestre_martingilmiguel.db.MyDatabase
-import com.example.aplicacion2trimestre_martingilmiguel.models.NotaModel
+import com.example.aplicacion2trimestre_martingilmiguel.model.NotaModel
 import com.example.aplicacion2trimestre_martingilmiguel.ui.notas.AddNotasActivity
 import com.example.aplicacion2trimestre_martingilmiguel.providers.db.CrudNotas
 

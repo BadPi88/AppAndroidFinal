@@ -8,7 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacion2trimestre_martingilmiguel.R
 import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityAddNotasBinding
-import com.example.aplicacion2trimestre_martingilmiguel.models.NotaModel
+import com.example.aplicacion2trimestre_martingilmiguel.model.NotaModel
 import com.example.aplicacion2trimestre_martingilmiguel.providers.db.CrudNotas
 
 class AddNotasActivity : AppCompatActivity() {
