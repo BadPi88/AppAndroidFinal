@@ -5,10 +5,10 @@
     <string name="api_key_google" formatted="false" translatable="false">753043433789-e6dmn64ldig34j333pa3gord5i4dp6tu.apps.googleusercontent.com</string>
     <string name="btn1_nombre">Notas</string>
     <string name="btn2_nombre">Buscador</string>
-    <string name="btn3_nombre">Localizacion</string>
+    <string name="btn3_nombre">Localización</string>
     <string name="btn4_nombre">Imagenes</string>
-    <string name="btn5_nombre">Tus Compañeros</string>
-    <string name="btn6_nombre">Mi Perfil</string>
+    <string name="btn5_nombre">Compañeros</string>
+    <string name="btn6_nombre">Perfil</string>
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -28,10 +28,20 @@
     <string name="nuestras_oficinas">Nuestras oficinas</string>
     <string name="oficina_regional">Oficina Regional</string>
     <string name="oficina_central">Oficina Central</string>
-    <string name="atras">Atras</string>
+    <string name="atras">Atrás</string>
     <string name="bloc_de_notas">Bloc de notas</string>
     <string name="nombre_del_personaje">Nombre del Personaje</string>
     <string name="crea_tu_nota">Crea tu nota</string>
     <string name="borrar">Borrar</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="perfil_guardado">Perfil Guardado</string>
+    <string name="enviar">Enviar</string>
+    <string name="bombilla">Bombilla</string>
+    <string name="texto_descripcion_app">Esta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de videoEsta es una aplicación de reproducción de video.........</string>
+    <string name="reproducir">Reproducir</string>
+    <string name="informaci_n_de_pocketbase">Información de PocketBase!</string>
+    <string name="eventos">Eventos</string>
+    <string name="informacion">Informacion</string>
+    <string name="iluminaci_n">Iluminación</string>
 
 </resources>

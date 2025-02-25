@@ -22,6 +22,12 @@ class ReproductorVideoActivity : AppCompatActivity() {
         binding = ActivityReproductorVideoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
         mediaController = MediaController(this)
         binding.videoView.setMediaController(mediaController)
         mediaController.setAnchorView(binding.videoView)
@@ -37,12 +43,10 @@ class ReproductorVideoActivity : AppCompatActivity() {
         }
     }
 
-
-
     //
     private fun reproducirVideo() {
         val idVideo = R.raw.pocketbase_vid1
-        val rutaVideo = "android.resource://$packageName/$idVideo"
+        val rutaVideo = "android.resource://com.example.aplicacion2trimestre_martingilmiguel/$idVideo"
         val uri = Uri.parse(rutaVideo)
         try {
             binding.videoView.setVideoURI(uri)
@@ -66,6 +70,7 @@ class ReproductorVideoActivity : AppCompatActivity() {
             binding.videoView.pause()
         }
     }
+
 
     override fun onResume() {
         super.onResume()

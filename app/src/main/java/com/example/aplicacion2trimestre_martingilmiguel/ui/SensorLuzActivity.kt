@@ -1,6 +1,7 @@
 package com.example.aplicacion2trimestre_martingilmiguel.ui
 
-
+import android.graphics.ColorMatrix
+import android.graphics.ColorMatrixColorFilter
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -32,7 +33,7 @@ class SensorLuzActivity : AppCompatActivity(), SensorEventListener {
             insets
         }
 
-        // Inicializar SensorManager y obtenengo el sensor de luz
+        // Inicializar SensorManager y obtener el sensor de luz
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         sensorLuz = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
 
@@ -63,7 +64,6 @@ class SensorLuzActivity : AppCompatActivity(), SensorEventListener {
 
     override fun onSensorChanged(event: SensorEvent?) {
         if (event?.sensor?.type == Sensor.TYPE_LIGHT) {
-            // nos devuelve el valor del sensor de luz [0]
             val nivelLuz = event.values[0]
 
             val mensaje = when {
@@ -73,10 +73,39 @@ class SensorLuzActivity : AppCompatActivity(), SensorEventListener {
             }
 
             binding.tvResLuz.text = "Nivel de luz: ${String.format("%.2f", nivelLuz)} Lux\n$mensaje"
+
+            // Ajustar brillo de la imagen del Sol
+            ajustarBrilloImagen(nivelLuz)
         }
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
         // No se usa
     }
+
+    // setScale(r, g, b, a) modifica la intensidad de RGB y a es la transparencia).
+    private fun ajustarBrilloImagen(lux: Float) {
+        val brillo = calcularBrilloImagen(lux)
+
+        val colorMatrix = ColorMatrix()
+        colorMatrix.setScale(brillo, brillo, brillo, 1f)
+
+        val colorFilter = ColorMatrixColorFilter(colorMatrix)
+        binding.ivBombilla.colorFilter = colorFilter
+    }
+
+    private fun calcularBrilloImagen(lux: Float): Float {
+        if (lux < 10) {
+            return 0.3f
+        } else if (lux < 50) {
+            return 0.5f
+        } else if (lux < 200) {
+            return 0.7f
+        } else if (lux < 1000) {
+            return 1.0f
+        } else {
+            return 1.5f
+        }
+    }
+
 }

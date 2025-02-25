@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.aplicacion2trimestre_martingilmiguel.NotasActivity
 import com.example.aplicacion2trimestre_martingilmiguel.R
 import com.example.aplicacion2trimestre_martingilmiguel.ReproductorVideoActivity
+import com.example.aplicacion2trimestre_martingilmiguel.TablonActivity
 import com.example.aplicacion2trimestre_martingilmiguel.databinding.ActivityAppBinding
 import com.example.aplicacion2trimestre_martingilmiguel.ui.mapa.MapaActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -64,13 +65,38 @@ class AppActivity : AppCompatActivity() {
             val intent = Intent(this, NotasActivity::class.java)
             startActivity(intent)
         }
-        binding.btnOpcion1.setOnClickListener {
+        binding.btnRevisarIluminacion.setOnClickListener {
             val intent = Intent(this, SensorLuzActivity::class.java)
             startActivity(intent)
         }
-        binding.btnOpcion2.setOnClickListener {
+        binding.btnVideo.setOnClickListener {
             val intent = Intent(this, ReproductorVideoActivity::class.java)
             startActivity(intent)
+        }
+        binding.btnTablon.setOnClickListener {
+            val intent = Intent(this, TablonActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        //para el menu lateral
+        binding.navigationview.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.item_salir -> {
+                    finishAffinity()
+                    true
+                }
+
+                R.id.item_logout -> {
+                    auth.signOut()
+                    finish()
+                    true
+                }
+
+                else -> {
+                    false
+                }
+            }
         }
     }
 }
