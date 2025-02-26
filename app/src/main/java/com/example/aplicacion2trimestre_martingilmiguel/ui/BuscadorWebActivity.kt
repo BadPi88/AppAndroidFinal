@@ -51,7 +51,7 @@ class BuscadorWebActivity : AppCompatActivity() {
                 binding.swipe.isRefreshing = false
             }
         }
-
+        // WebChromeClient para tener mas control sobre la vista web, como poder interactuar con los elementos de la web
         binding.webView.webChromeClient = WebChromeClient()
 
         // Enable JavaScript

@@ -7,6 +7,7 @@ import com.example.aplicacion2trimestre_martingilmiguel.model.NotaModel
 
 class CrudNotas {
 
+    //Añadir una nota a la base de datos
     fun create(nota: NotaModel): Long {
         val db = AppBd.llave.writableDatabase
         return try {

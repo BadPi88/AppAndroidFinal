@@ -43,12 +43,15 @@
         android:id="@+id/btnGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:shadowColor="#4CAF50"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="52dp"
         android:backgroundTint="#4CAF50"
+        android:shadowColor="#4CAF50"
         android:text="Guardar"
-        app:layout_constraintBottom_toBottomOf="@+id/btnCancelar"
-        app:layout_constraintEnd_toStartOf="@+id/btnCancelar" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancelar"
+        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/cbOption1"
@@ -97,14 +100,12 @@
         android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#D33C3C"
         android:text="Cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="#D33C3C"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Spinner
         android:id="@+id/spinnerOpciones"
